@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>questions about semantic versioning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wickedcss.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="a micromaterial to practice understanding semver (semantic versioning). This is based on the question templates by Julia Evans.">
+    <script src="script.js"> </script>
+    <meta name="author" content="Adam Leskis (lpmi-13)"/>
+    <meta name="date" content="2021-05-03"/>
+  </head>
+  <body>
+    <h1>which numbers to pick?</h1>
+    <div class="container">
+      <div id="buttons">
+        <p>
+          So you're an open-source maintainer (or even just a professional developer). You've just updated some code and you'd like to create a new release.
+        </p>
+        <p>
+          You've built and tested everything, and now the only question left is to bump the version. But what version should you bump to?
+        </p>
+
+        <p id="top-buttons">
+        <button id="button-start">start</button>
+        <button id="button-reveal-all">reveal all answers</button>
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="question">
+          <h3>
+            You are on version <code>2.3.4</code> and you fixed a bug.
+          </h3>
+        </div>
+        <div class="answer">
+          <h3>
+            2.3.5
+          </h3>
+          <p>
+           the final digit is a patch version, and incrementing it means a bug fix with no breaking changes.
+           </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="question">
+          <h3>
+            You are on version <code>8.1.1</code> and you released a bunch of breaking API changes.
+          </h3>
+        </div>
+        <div class="answer">
+          <h3>
+            9.0.0
+          </h3>
+          <p>
+            When you break functionality across versions, you should let the users (and their automation) know. It's best practice to reset the MINOR/PATCH versions to 0 when bumping a major version.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="question">
+          <h3>
+            You are on version <code>1.0.25</code> and you release some new features, but everything's backwards compatible.
+          </h3>
+        </div>
+        <div class="answer">
+          <h3>
+            1.1.0
+          </h3>
+          <p>
+            Like updating the MAJOR version, when you upgrade the MINOR version, be sure to reset the PATCH version to 0.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="question">
+          <h3>
+            You are on version <code>22.0.8</code> and you release some new shiny features, but you ALSO change some of the existing functionality.
+          </h3>
+        </div>
+        <div class="answer">
+          <h3>
+            23.0.0
+          </h3>
+          <p>
+            Whenever you release, if you changed anything in a non-backwards compatible way, you should let people
+            know by bumping the MAJOR version.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="question">
+          <h3>
+            You are on version <code>1.12.5</code> and you release a bugfix
+          </h3>
+        </div>
+        <div class="answer">
+          <h3>
+            1.12.6
+          </h3>
+          <p>
+           the final digit is a patch version, and incrementing it means a bug fix with no breaking changes.
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="question">
+          <h3>
+            You are on version <code>0.10.6</code> and you release a whole bunch of new features and break a bunch of stuff.
+          </h3>
+        </div>
+        <div class="answer">
+          <h3>
+            0.11.0
+          </h3>
+          <p>
+            One special case in semver is if things have a 0 for the MAJOR version, then they're intended as a development
+            release with no promise of a stable API. Users can rely on features at their own discretion.
+            In this case, we just bump the minor version even though things have changed.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      start()
+    </script>
+  </body>
+</html>

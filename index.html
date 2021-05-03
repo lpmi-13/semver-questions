@@ -2,68 +2,46 @@
 <html dir="ltr" lang="en-US">
   <head>
     <meta charset="utf-8" />
-    <title>questions about network packets</title>
+    <title>questions about semantic versioning</title>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="wickedcss.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="a micromaterial to practice understanding semver (semantic versioning). This is based on the question templates by Julia Evans.">
     <script src="script.js"> </script>
-    <meta name="author" content="Julia Evans"/>
-    <meta name="date" content="2020-06-08"/>
+    <meta name="author" content="Adam Leskis (lpmi-13)"/>
+    <meta name="date" content="2021-05-03"/>
   </head>
   <body>
-    <h1>example question template</h1>
+    <h1>introduction to semantic versioning</h1>
     <div class="container">
       <div id="buttons">
         <p>
-        Hello! Here are some questions &amp; answers. The goal isn't to get all the questions
-        "right". Instead, the goal is to learn something! If you find a topic you're interested in
-        learning more about, I'd encourage you to look it up and learn more.
+        Hi there! Semantic versioning uses three numbers with dots in the middle to show what happened in an update.
+        </p>
+        <p>
+        The first number means the MAJOR version, and changing this usually means you can't use the dependency in the same way.
+        </p>
+        <p>
+        The second number means the MINOR version, and changing this usually means you can use it in a new way, but the old way still works fine. 
+        </p>
+        <p>
+        The third number means the PATCH version, and changing this means bugs were fixed, but everything else should still work the same.
+        </p>
+        <p>
+          If you'd like to know more, here is an <a href="https://semver.org/">explanation of semver</a>
         </p>
 
-        <p id="top-buttons">
-        <button id="button-start">start</button>
-        <button id="button-reveal-all">reveal all answers</button>
-        </p>
-      </div>
-
-      <div class="row">
-        <div class="question">
-          <h3>
-            here's a question
-          </h3>
-        </div>
-        <div class="answer">
-          <h3>
-            here's an answer!
-          </h3>
-          <p>
-          some details about the answer
-          </p>
-          <p>
-          <code> $ a command </code>
-          </p>
+        <div id="top-links">
+          <div>
+            <a href="/does-it-break.html">practice what the numbers mean</a>
+          </div>
+          <div>
+            <a href="/what-numbers-to-use.html">practice which numbers to pick</a>
+          </div>
         </div>
       </div>
 
-      <div class="row">
-        <div class="question">
-          <h3>
-            here's another question
-          </h3>
-        </div>
-        <div class="answer">
-          <h3>
-            here's another answer!
-          </h3>
-          <p>
-          some details about the answer
-          </p>
-          <p>
-          <code> $ another command </code>
-          </p>
-        </div>
-      </div>
     </div>
 
     <script>

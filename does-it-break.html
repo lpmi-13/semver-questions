@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>questions about semantic versioning</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="wickedcss.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inconsolata&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="a micromaterial to practice understanding semver (semantic versioning). This is based on the question templates by Julia Evans.">
+    <script src="script.js"> </script>
+    <meta name="author" content="Adam Leskis (lpmi-13)"/>
+    <meta name="date" content="2021-05-03"/>
+  </head>
+  <body>
+    <h1>what do the numbers mean?</h1>
+    <div class="container">
+      <div id="buttons">
+        <p>
+          You're getting alerts to upgrade the versions of some of your software dependencies, but you don't want
+          to break anything. Yikes!
+        </p>
+        <p>
+          By checking the semantic version numbers, you can (fairly) easily decide if you can just merge and deploy
+          or if you need some more thorough testing to see what broke.
+        </p>
+
+        <p id="top-buttons">
+        <button id="button-start">start</button>
+        <button id="button-reveal-all">reveal all answers</button>
+        </p>
+      </div>
+
+      <div class="row">
+        <div class="question">
+          <h3>
+            is 16.13.0 => 16.13.1 a breaking change?
+          </h3>
+        </div>
+        <div class="answer">
+          <h3>
+            no.
+          </h3>
+          <p>
+           the final digit is a patch version, and incrementing it means a bug fix with no breaking changes.
+           </p>
+           <p>
+           Example: <a href="https://github.com/facebook/react/releases/tag/v16.13.1">https://github.com/facebook/react/releases/tag/v16.13.1</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="question">
+          <h3>
+            Is 1.19.10 => 1.21.0 a breaking change?
+          </h3>
+        </div>
+        <div class="answer">
+          <h3>
+            no.
+          </h3>
+          <p>
+            the middle digit is a minor version, so some new stuff was added, but nothing that currently works should break.
+          </p>
+          <p>
+            Example: <a href="https://github.com/kubernetes/kubernetes/releases/tag/v1.21.0">https://github.com/kubernetes/kubernetes/releases/tag/v1.21.0</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="question">
+          <h3>
+            Is 1.49.0 => 1.50.0 a breaking change?
+          </h3>
+        </div>
+        <div class="answer">
+          <h3>
+            no.
+          </h3>
+          <p>
+            the middle digit is a minor version, so some new stuff was added, but nothing that currently works should break.
+          </p>
+          <p>
+            Example: <a href="https://github.com/rust-lang/rust/releases/tag/1.51.0">https://github.com/rust-lang/rust/releases/tag/1.51.0</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="question">
+          <h3>
+            Is 15.7.0 => 16.0.0 a breaking change?
+          </h3>
+        </div>
+        <div class="answer">
+          <h3>
+            yes.
+          </h3>
+          <p>
+            the first digit is a major version, so we definitely expects things that work in 15.7.0 to NOT work in 16.0.0.
+          </p>
+          <p>
+            Example: <a href="https://github.com/facebook/react/blob/master/CHANGELOG.md#breaking-changes">https://github.com/facebook/react/blob/master/CHANGELOG.md#breaking-changes</a>
+          </p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="question">
+          <h3>
+            Is 3.9.8 => 3.9.9 a breaking change?
+          </h3>
+        </div>
+        <div class="answer">
+          <h3>
+            no.
+          </h3>
+          <p>
+           the final digit is a patch version, and incrementing it means a bug fix with no breaking changes.
+          </p>
+          <p>
+            Example: <a href="https://github.com/microsoft/TypeScript/releases/tag/v3.9.9">https://github.com/microsoft/TypeScript/releases/tag/v3.9.9</a>
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      start()
+    </script>
+  </body>
+</html>

@@ -1,6 +1,5 @@
 let app = {}
 function start() {
-    let answers = document.getElementsByClassName('answer');
     app.rows = Array.from(document.getElementsByClassName('row'));
     /* add "next question" button to each row except the last row*/
     for (row of app.rows) {

@@ -58,6 +58,11 @@ pre {
     text-align: center;
 }
 
+#top-links div {
+  margin: 2em 1em;
+  font-size: 2rem;
+}
+
 #button-reveal-all {
     opacity: 0.4;
 }
@@ -156,6 +161,7 @@ button:focus {
     position: relative;
     border-radius: 10px;
     background-color: var(--secondary-color);
+    word-wrap: break-word;
 }
 
 .answer::before {
