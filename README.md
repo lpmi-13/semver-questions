@@ -1,5 +1,7 @@
 # semver Q&A
 
+[quick primer](https://semver.org) on semantic versions
+
 This is a micromaterial to practice reading and understanding semantic versioning (semver).
 
 It's based on the [questions template](https://github.com/questions-template/questions-template.github.io) by the amazing Julia Evans. You can see her much better version [here](https://questions.wizardzines.com/).
