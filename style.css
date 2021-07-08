@@ -63,6 +63,12 @@ pre {
   font-size: 2rem;
 }
 
+#top-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 #button-reveal-all {
     opacity: 0.4;
 }
