@@ -1,5 +1,7 @@
 # semver Q&A
 
+Running live [here](https://semver-questions.netlify.app)
+
 [quick primer](https://semver.org) on semantic versions
 
 This is a micromaterial to practice reading and understanding semantic versioning (semver).
